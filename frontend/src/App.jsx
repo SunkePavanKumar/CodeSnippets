@@ -13,9 +13,9 @@ function App() {
               Share your code with the world
             </h1>
             <p className="max-w-[800px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed ">
-              A platform for sharing and discovering code snippets. Whether
-              you're looking to showcase your skills, help others learn, or find
-              inspiration, we've got you covered.
+              A platform for sharing and discovering code snippets. Whether you
+              are looking to showcase your skills, help others learn, or find
+              inspiration, we have got you covered.
             </p>
           </div>
           <div className="flex justify-center gap-2 min-[400px]:gap-4">

@@ -1,5 +1,4 @@
-import React from "react";
-import { Link, BrowserRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Frown } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -40,7 +39,7 @@ const ErrorPage = () => {
         transition={{ delay: 0.6 }}
         className="mt-4 text-gray-600 dark:text-gray-400"
       >
-        The page you're looking for doesn't exist or has been moved.
+        The page you are looking for doesnot exist or has been moved.
       </motion.p>
       <Link
         to="/"
