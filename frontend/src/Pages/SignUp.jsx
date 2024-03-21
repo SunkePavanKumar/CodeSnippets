@@ -36,7 +36,7 @@ function SignUp() {
     }
 
     try {
-      const endpoint = `${import.meta.env.VITE_BACKEND_URI}/user/signup`;
+      const endpoint = `${import.meta.env.VITE_BACKEND_URI}/users/register`;
       const response = await axios.post(endpoint, {
         firstName,
         lastName,
@@ -50,6 +50,7 @@ function SignUp() {
 
       // Store the token in local storage
       localStorage.setItem("token", token);
+      localStorage.setItem("user", email);
       toast.success("Logged in successfully");
       navigator("/login");
     } catch (error) {

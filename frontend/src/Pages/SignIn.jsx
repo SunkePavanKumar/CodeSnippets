@@ -21,11 +21,12 @@ function SignIn() {
     }
 
     try {
-      const endpoint = `${import.meta.env.VITE_BACKEND_URI}/user/signin`;
+      const endpoint = `${import.meta.env.VITE_BACKEND_URI}/users/login`;
       const response = await axios.post(endpoint, { email, password });
       const token = response.data.token;
 
       localStorage.setItem("token", token);
+      localStorage.setItem("user", email);
       toast.success("Logged in Successfully");
       navigator("/");
     } catch (error) {
