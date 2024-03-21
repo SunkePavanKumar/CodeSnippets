@@ -9,7 +9,7 @@ export const register = async (req, res) => {
     // validate the request body using zod
     const validatedData = registrationSchema.parse(req.body);
 
-    const { name, email, password } = validatedData;
+    const { firstName, lastName, email, password } = validatedData;
 
     // check the user already exists in the database or not
     const existingUser = await User.findOne({ email: email }).lean().exec();
@@ -26,7 +26,8 @@ export const register = async (req, res) => {
 
     // save the user to the database
     const newUser = new User({
-      name,
+      firstName,
+      lastName,
       email,
       password: hashedPassword,
     });
