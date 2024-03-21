@@ -3,6 +3,7 @@ import connect from "./db/connect.js";
 import "dotenv/config.js";
 import cors from "cors";
 import userRouter from "./routes/users.route.js";
+import snippetRouter from "./routes/snippet.route.js";
 
 const app = express();
 
@@ -10,6 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use("/api/v1/users", userRouter);
+app.use("/api/v1/snippet", snippetRouter);
 
 const PORT = process.env.PORT || 8000;
 
